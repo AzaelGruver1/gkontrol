@@ -1,0 +1,237 @@
+/* paleta de colores */
+:root {
+
+    --principal:#192b4b;
+    --secundario:#283c82;
+    --celeste:#30bded;
+    --celesteOscuro:#2985c5;
+    --blanco:#ffffff;
+    --oscuro:#000000;
+    --gris:#f8fafc;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*::after, *::before{
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
+.encabezado{
+
+    height: 100vh;
+    background-image: url('../img/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+
+.encabezado::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    z-index: -1;
+}
+
+.navegacion{
+    background-color: var( --blanco );
+    padding: 1rem 4rem;
+}
+.contenedor-encabezado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var( --blanco );
+    z-index: 1; 
+}
+
+.logo img {
+    width: 200px;
+}
+.navegacion a {
+    text-decoration: none;
+    padding: 1rem;
+    color: var( --principal );
+}
+
+.navegacion a:hover {
+    color: var( --celesteOscuro );
+}
+
+.informacion-encabezado{
+    display: grid;
+    height: 90%;
+    grid-template-columns: repeat( 2, 1fr );
+    
+}
+.contenedor-eslogan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+}
+.contenedor-eslogan h1{
+    color: var( --celesteOscuro );
+    font-size: 8rem;
+    font-weight: 600;
+    margin-left: 5rem;
+}
+.contenedor-eslogan span {
+    color: var( --blanco );
+}
+.contenedor-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-logo img {
+    width: 80%;
+}
+
+/* nosotros */
+
+.contenedor-nosotros{
+    
+    padding-top: 5rem;
+}
+@media(min-width: 768px) {
+    .contenedor-nosotros{
+        display: flex;
+         justify-content: space-between;
+    }   
+}
+.texto-nosotros, .imagenes-nosotros{
+   
+    flex: 0 0 calc(50% - 1rem) ;
+}
+.texto-nosotros .bienvenida{
+    font-size: 4rem;
+    color: var(--verde);
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-nosotros .bienvenida{
+        text-align: justify;
+    }
+}
+.texto-nosotros h2{
+    font-size: 5rem;
+    text-align: center;
+    color: var( --secundario );
+}
+@media(min-width: 768px) {
+    .texto-nosotros h2{
+        text-align: left;
+    }
+}
+.texto-nosotros p{
+    font-size: 2rem;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-nosotros p{
+        text-align: left;
+    }
+}
+.imagenes-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+.imagenes-nosotros img{
+    border-radius: 5px;
+}
+.imagen1, .imagenes2{
+    flex: 0 0 calc(50% - 1rem);
+}
+.imagenes2 img{
+    margin-bottom: 1rem;
+}
+.menu{
+    padding-top: 4rem;
+}
+.btn-contactar {
+    padding: 1rem 3rem;
+    background-color: var( --principal );
+    color: var( --blanco );
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/*trabajo*/
+
+
+
+.trabajo h2{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--secundario);
+}
+@media(min-width: 768px) {
+    .trabajo h2{
+        font-size: 5rem;
+    }
+}
+.contenido-trabajo{
+    background-image: url('../img/_DSC0623.jpg');
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media(min-width: 768px) {
+    .contenido-trabajo{
+        grid-template-columns:repeat(2,1fr);
+        background-attachment: fixed;
+    }
+}
+
+
+.texto-trabajo{
+    padding: 2rem;
+    grid-row: 2/3;
+    background-color: var(--blanco);
+}
+
+@media(min-width: 768px) {
+    .texto-trabajo{
+        padding:5rem;
+    }
+}
+
+.texto-trabajo h3{
+    font-size: 4rem;
+    color: var(--secundario);
+    text-align: center;
+}
+
+.texto-trabajo p{
+    font-size: 2.2rem;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-trabajo p{
+        text-align: left;
+    }
+}
