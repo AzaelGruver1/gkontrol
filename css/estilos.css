@@ -109,14 +109,86 @@ img {
     width: 80%;
 }
 
-/* nosotros */
 
-.contenedor-nosotros{
+/* ventajas */
+
+.contenedor-beneficios {
+    display: grid;
+    grid-template-columns: repeat( 2,1fr );
+
+}
+
+.texto-beneficios{
+    background: url('../img/nosotrosejemplo.jpg') no-repeat  center center;
+    height: 800px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    /* @include difuminado-transparente($azulTransparente); */
     
+}
+.texto-beneficios::before{
+    content: '';
+    background-color: rgba(25, 43, 75, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+  }
+
+.texto-beneficios h2 {
+        position: relative;
+        z-index: 1;
+        color:#ffffff;
+        text-align: center;
+        font-size: 8rem;
+
+}
+
+.iconos-beneficios{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  z-index: -1;
+  margin-left: 3rem;
+}
+.icono {
+    margin-top: 6rem;
+    text-align: center;
+}
+.icono-info {
+    font-size: 8rem;
+    color: var( --principal );
+}
+
+.txt-beneficios {
+    font-size: 2rem;
+}
+.txt-beneficios {
+    width: 97%;
+}
+.txt-beneficios span {
+    color: var( --celesteOscuro );
+    font-weight: bold;
+    text-align: center;
+    /* width: 85%; */
+}
+
+/* nosotros */
+.contenedor-nosotros {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-nosotros {
     padding-top: 5rem;
 }
 @media(min-width: 768px) {
-    .contenedor-nosotros{
+    .contenido-nosotros{
         display: flex;
          justify-content: space-between;
     }   
@@ -130,6 +202,11 @@ img {
     color: var(--verde);
     text-align: center;
 }
+.texto-nosotros2{
+    color: var(--celesteOscuro);
+    font-weight: bold;
+    font-size: 4rem;
+}
 @media(min-width: 768px) {
     .texto-nosotros .bienvenida{
         text-align: justify;
@@ -138,7 +215,14 @@ img {
 .texto-nosotros h2{
     font-size: 5rem;
     text-align: center;
-    color: var( --secundario );
+    color: var( --principal );
+}
+.texto-nosotros h2::after {
+    content: '';
+    display: block;
+    width: 10%;
+    height: 5px;
+    background-color: var( --celesteOscuro );
 }
 @media(min-width: 768px) {
     .texto-nosotros h2{
@@ -147,7 +231,7 @@ img {
 }
 .texto-nosotros p{
     font-size: 2rem;
-    text-align: center;
+    text-align: justify;
 }
 @media(min-width: 768px) {
     .texto-nosotros p{
@@ -174,13 +258,12 @@ img {
     padding: 1rem 3rem;
     background-color: var( --principal );
     color: var( --blanco );
+    border: 2px solid var(--principal);
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 /*trabajo*/
-
-
 
 .trabajo h2{
     text-align: center;

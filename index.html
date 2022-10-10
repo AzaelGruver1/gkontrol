@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/753766ce2c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
@@ -39,30 +42,98 @@
         </div>
     </header>
 
-    <div class="contenedor-nosotros contenedor">
-        <div class="texto-nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, fugiat delectus porro suscipit
-                architecto ab impedit accusantium quod voluptate quaerat odio sunt quisquam odit, sapiente aut esse
-                possimus nulla totam!
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate eveniet placeat nesciunt harum
-                similique ab, illo debitis ullam ipsa labore quidem vitae sunt et quasi veritatis? Excepturi ex non
-                cumque.
-            </p>
-            <a href="#" class="btn btn-contactar">Contactar</a>
-        </div>
-        <div class="imagenes-nosotros">
-            <div class="imagen1">
-                <img src="img/nosotros3.jpg" alt="mujer comiendo pizza">
+
+    <div class="contenedor-beneficios">
+        <div class="texto-beneficios">
+            <h2>Contrata a GKontrol</h2>
+            <div class="boton-beneficios">
+                <a href="contacto.html" class="boton-primario amarillo">Postulate &rtrif;</a>
             </div>
-            <div class="imagenes2">
-                <img src="img/nosotros2.jpg" alt="mujeres comiendo pizza">
-                <img src="img/nosotros1.jpg" alt="plato con pasta">
+        </div>
+        <div class="iconos-beneficios" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+            data-aos-duration="1000">
+            <div class="icono">
+                <div class="icono-info">
+                    <i class="fas fa-money-check-alt"></i>
+                </div>
+                <div class="txt-beneficios">
+                    <p>Soporte las <span>24 horas del dia </span></p>
+                </div>
+            </div>
+            <div class="icono">
+                <div class="icono-info">
+                    <i class="fas fa-clinic-medical"></i>
+                </div>
+                <div class="txt-beneficios">
+                    <p>Capacitación<span> primeros auxilios</span></p>
+                </div>
+            </div>
+            <div class="icono">
+                <div class="icono-info">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <div class="txt-beneficios">
+                    <p>Prestaciones <span>de ley</span></p>
+                </div>
+            </div>
+            <div class="icono">
+                <div class="icono-info">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="txt-beneficios">
+                    <p>Uniformes <span> sin costo</span></p>
+                </div>
+            </div>
+            <div class="icono">
+                <div class="icono-info">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <div class="txt-beneficios">
+                    <p>Capacitación <span>pagada</span></p>
+                </div>
+            </div>
+            <div class="icono">
+                <div class="icono-info">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="txt-beneficios">
+                    <p>Buen ambiente <span>laboral</span></p>
+                </div>
             </div>
         </div>
     </div>
 
-    <section class="trabajo contenedor" id="nosotros">
+
+    <div class="contenedor-nosotros" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+        data-aos-duration="1000">
+        <div class="contenido-nosotros contenedor">
+            <div class="texto-nosotros">
+                <h2>Sobre Nosotros</h2>
+                <p class="texto-nosotros2">Cuidando tu patrimonio.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, fugiat delectus porro
+                    suscipit
+                    architecto ab impedit accusantium quod voluptate quaerat odio sunt quisquam odit, sapiente aut esse
+                    possimus nulla totam!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate eveniet placeat nesciunt harum
+                    similique ab, illo debitis ullam ipsa labore quidem vitae sunt et quasi veritatis? Excepturi ex non
+                    cumque.
+                </p>
+                <a href="#" class="btn btn-contactar">Contactar</a>
+            </div>
+            <div class="imagenes-nosotros">
+                <div class="imagen1">
+                    <img src="img/nosotrosejemplo.jpg" alt="guardias">
+                </div>
+                <div class="imagenes2">
+                    <img src="img/nosotros2.jpg" alt="guardias">
+                    <img src="img/nosotros1.jpg" alt="guardias ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="trabajo contenedor" id="nosotros" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+        data-aos-duration="1000">
         <h2>Trabaja con nosotros</h2>
         <div class="contenido-trabajo">
 
@@ -71,10 +142,14 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quam laudantium sed minima consectetur!
                     Sint deleniti officia blanditiis omnis possimus temporibus nihil quos. Molestias a cumque libero
                     adipisci, voluptatum minus?</p>
-                <a href="#" class="btn bordes"> saber más</a>
+                <a href="#" class="btn-contactar"> saber más</a>
             </div>
         </div>
     </section>
 </body>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="preload" as="script" href="https://unpkg.com/aos@2.3.1/dist/aos.js" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/app.js"></script>
 
 </html>
