@@ -1,126 +1,89 @@
 AOS.init();
 AOS.init({
-	disable: false, 
-	startEvent: 'DOMContentLoaded', 
-	initClassName: 'aos-init', 
-	animatedClassName: 'aos-animate', 
-	useClassNames: false, 
-	disableMutationObserver: false, 
-	debounceDelay: 50,
-	throttleDelay: 99,
+    disable: false,
+    startEvent: 'DOMContentLoaded',
+    initClassName: 'aos-init',
+    animatedClassName: 'aos-animate',
+    useClassNames: false,
+    disableMutationObserver: false,
+    debounceDelay: 50,
+    throttleDelay: 99,
 
-	offset: 120, 
-	delay: 0, 
-	duration: 400, 
-	easing: 'ease', 
-	once: false, 
-	mirror: false, 
-	anchorPlacement: 'top-bottom',
-  
-  });
+    offset: 120,
+    delay: 0,
+    duration: 400,
+    easing: 'ease',
+    once: false,
+    mirror: false,
+    anchorPlacement: 'top-bottom',
 
-
-  (async () => {
-
-    const respuestaEstados = await fetch(
-        'https://code.highcharts.com/mapdata/countries/mx/mx-all.topo.json'
-    ).then(response => response.json());
+});
 
 
-    const estados = [
-         ['mx-ve', 27]
-    ];
-
-	console.log( estados )
-
-    Highcharts.mapChart('mapa', {
-        chart: { map: respuestaEstados },
-		
-		title: { text: ''},
-        
-		mapNavigation: {
-            enabled: true,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
-
-        colorAxis: {
-            min: 0
-        },
-
-        series: [{
-            data: estados,
-            name: 'Estamos en todo el estado',
-            states: {
-                hover: {
-                    color: '#192b4b'
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}'
-            }
-        }]
-    });
-
-})();
 
 
 const servicios = document.querySelectorAll('.menu-servicio');
 let servicioActivo = null;
 const descripcionServicios = document.querySelectorAll('.descripcion-servicio');
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
     agregarAtributoServicios();
     // iniciarApp();
     // eventosFormulario();
-    addEventoBoton();
-    scrollNavegacion();
+    // addEventoBoton();
+    // scrollNavegacion();
 });
 
-function agregarAtributoServicios(){
+function agregarAtributoServicios() {
 
-    servicios.forEach(servicio =>{ 
-       servicio.addEventListener('click', (e) =>{
-           servicios.forEach(elemento =>{
-             elemento.classList.remove('servicio-activo');
-             console.log(e.currentTarget.getAttribute("data-servicio"));
-           });
-           //agregamos la clase de servicio-activo, a lo que el usuario le de click
-           e.currentTarget.classList.toggle('servicio-activo');
-           servicioActivo = servicio.dataset.servicio;
-
-
-           descripcionServicios.forEach(descripcion =>{
-               if(descripcion.dataset.servicio === servicioActivo){
-                   descripcion.classList.add('descripcion-activa');
-                   
-               }else{
-                   descripcion.classList.remove('descripcion-activa');
-               }
-           });
-
-       });  
-    });
-}
-
-
-function scrollNavegacion (){
-    const enlaces = document.querySelectorAll('contenedor-menu-servicios a');
-    enlaces.forEach(enlace =>{
-        enlace.addEventListener('click', e =>{
-            e.preventDefault();
-            const seccion = document.querySelector(e.target.attributes.href.value);
-
-            seccion.scrollIntoView({
-                behavior:'smooth'
+    servicios.forEach(servicio => {
+        servicio.addEventListener('click', (e) => {
+            servicios.forEach(elemento => {
+                elemento.classList.remove('servicio-activo');
+                console.log(e.currentTarget.getAttribute("data-servicio"));
             });
+            //agregamos la clase de servicio-activo, a lo que el usuario le de click
+            e.currentTarget.classList.toggle('servicio-activo');
+            servicioActivo = servicio.dataset.servicio;
+
+
+            descripcionServicios.forEach(descripcion => {
+                if (descripcion.dataset.servicio === servicioActivo) {
+                    descripcion.classList.add('descripcion-activa');
+
+                } else {
+                    descripcion.classList.remove('descripcion-activa');
+                }
+            });
+
         });
     });
 }
 
- 
-$(document).ready(function(){
+
+function scrollNavegacion() {
+    const enlaces = document.querySelectorAll('.navegacion a');
+    // console.log(enlaces)
+
+    enlaces.forEach(function (enlace) {
+        //para poder darle un evento a multiples elementos, primero debemos iterarlo
+        enlace.addEventListener('click', function (e) {
+            const atributo = e.target.attributes.href.value
+            //  console.log(typeof atributo)
+            if (atributo.includes('.html')) return
+            e.preventDefault(); //para que no haga la funcion por default
+
+            const seccion = document.querySelector(e.target.attributes.href.value);
+            console.log(seccion)
+
+            seccion.scrollIntoView({
+                behavior: 'smooth'
+            });
+        })
+    });
+}
+scrollNavegacion()
+
+$(document).ready(function () {
     $('.customer-logos').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
@@ -128,11 +91,11 @@ $(document).ready(function(){
         autoplaySpeed: 1500,
         arrows: false,
         dots: false,
-        pauseOnHover:false,
+        pauseOnHover: false,
         responsive: [{
             breakpoint: 768,
             setting: {
-                slidesToShow:4
+                slidesToShow: 4
             }
         }, {
             breakpoint: 520,
