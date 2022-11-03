@@ -552,7 +552,7 @@ img {
 .lista-servicios  p{
     color: var( --principal );
     margin: 1rem 0;
-    font-size: 2rem;
+    /* font-size: 2rem; */
 }
 
 .lista-servicios   i{
@@ -613,46 +613,6 @@ img {
         transition: all .3s ease;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*trabajo*/
 
@@ -935,4 +895,111 @@ textarea {
 }
 .copy{
     padding-top: 250px;
+}
+
+.header-encabezado{
+    height: 400px;
+    background-image: url('../img/trabajo.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: -1;
+}
+
+.header-encabezado::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    z-index: -1;
+}
+.eslogan-trabajo {
+    margin-top: 10rem;
+    margin-left: 5rem;
+    font-size: 2rem;
+    color: var( --blanco );
+}
+.contenedor-btn-whats {
+    position: relative;
+    z-index: 1;
+}
+
+.oferta-laboral {
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr );
+    padding: 5rem;
+    gap: 2rem;
+}
+.card-oferta-laboral {
+    padding: 1rem;
+    border: 2px solid var(--gris);
+}
+.card-oferta-laboral h3, .card-oferta-laboral .icono-oferta,  .requisito .icono-oferta {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.icono-oferta {
+    color: var(--celesteOscuro);
+    
+}
+.card-oferta-laboral h3 {
+    color: var(--principal);
+}
+
+.requisitos-contenedor {
+    background-color: var(--gris);
+    padding: 4rem;
+
+}
+
+.requisitos-contenedor h2 {
+    text-align: center;
+    color: var(--secundario);
+    margin-bottom: 10rem;
+}
+.requisitos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.requisito p {
+    text-align: center;
+}
+.contenedor-btn-whats {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.btn-whats {
+    text-decoration: none;
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    color: var(--blanco);
+}
+
+.header-servicios {
+    height: 400px;
+    background-image: url('../img/servicios.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    z-index: -1;
+}
+
+.header-servicios::before{
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    z-index: -1;
 }
