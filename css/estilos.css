@@ -215,14 +215,36 @@ img {
     .cotizacion-informacion {
         padding: 5rem;
         display: grid;
-        grid-template-columns: repeat( 3, 1fr );
-        gap: 1rem;
+        grid-template-columns: repeat( 2, 1fr );
+        /* gap: 1rem; */
+        /* column-gap: 1rem; */
     }
 }
-
+.card-cotizacion {
+    padding: 2rem;
+}
 .card-cotizacion:nth-child(3) {
     grid-column: 1/2;
+    /* border-right: 2px solid var(--grisOscuro); */
+    margin-top: 0;
 
+}
+@media (min-width:768px) {
+    .card-cotizacion:nth-child(1) {
+        border-right: 2px solid var(--grisOscuro);
+        border-bottom: 2px solid var(--grisOscuro);
+    }
+    .card-cotizacion:nth-child(2) {
+        /* border-right: 2px solid var(--grisOscuro); */
+        border-bottom: 2px solid var(--grisOscuro);
+    }
+    .card-cotizacion:nth-child(3) {
+        /* grid-column: 1/2; */
+        border-right: 2px solid var(--grisOscuro);
+        /* margin-top: 0; */
+    
+    }
+    
 }
 
 .card-cotizacion:nth-child(5) {
@@ -291,7 +313,7 @@ img {
         z-index: 1;
         color:#ffffff;
         text-align: center;
-        font-size: 4rem;
+        font-size: 3.5rem;
 
 }
 
@@ -885,7 +907,7 @@ img {
 @media (min-width:768px) {
     .contenedor-footer {
         display: grid;
-        grid-template-columns: repeat( 3, 1fr );
+        grid-template-columns: repeat( 2, 1fr );
         gap: 2rem;
         padding: 2rem;
     }
@@ -1030,7 +1052,14 @@ img {
     border-radius: 3px;
     /* border-bottom: .5px solid var(--celesteOscuro); */
 }
-
+.customer {
+    display: none;
+}
+@media (min-width: 768px) {
+    .customer {
+        display: block;
+    }
+}
 textarea {
     height: 20rem;
     resize: none;
@@ -1039,7 +1068,7 @@ textarea {
     margin: 0 20px;
 }
 .slick-slide img{
-    width: 100%;
+    max-width: 100%;
 }
 .slick-slider{
     position: relative;
@@ -1048,7 +1077,7 @@ textarea {
 }
 .slick-list{
     position: relative;
-    display: block;
+    /* display: block; */
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -1059,6 +1088,7 @@ textarea {
     left: 0;
     display: block
 }
+div.clear { clear: both; }
 .slick-slide{
     display: none;
     float: left;
