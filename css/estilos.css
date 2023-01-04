@@ -360,7 +360,7 @@ img {
 
 /* nosotros */
 .contenedor-nosotros {
-    margin: 10rem 0;
+    /* margin: 3rem 0; */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -1474,3 +1474,50 @@ div.clear { clear: both; }
         transform: translateY(0);
     }
   }
+
+.contenedor-ofrecemos h2, .contenedor-fichas-tecnicas h2 {
+    text-align: center;
+    color: var( --principal );
+    font-size: 3.5rem;
+    margin-top: 0;
+}
+.entregamos-texto p{
+    font-size: 2.5rem;
+}
+.contenido-ofrecemos {
+    display: grid;
+}
+@media (min-width:768px) {
+    .contenido-ofrecemos {
+    grid-template-columns: repeat(2,1fr);
+
+    }
+}
+.banner-certificados {
+    text-align: center;
+    background-color: var( --principal );
+    padding: 1rem 3rem;
+    color: var( --blanco );
+}
+
+.logos-recep {
+    margin-top: 2rem;
+
+}
+.contenedor-fichas-tecnicas{
+    margin-top: 4rem;
+}
+.contenido-fichas{
+    /* margin-top: 4rem; */
+    display: grid;
+    /* grid-template-columns: repeat(3,1fr); */
+    gap: 2rem;
+}
+@media (min-width:768px) {
+    .contenido-fichas{
+        /* margin-top: 4rem; */
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+}

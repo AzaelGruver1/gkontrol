@@ -20,13 +20,11 @@ AOS.init({
 });
 
 
-
-
-const servicios = document.querySelectorAll('.menu-servicio');
-let servicioActivo = null;
-const descripcionServicios = document.querySelectorAll('.descripcion-servicio');
+const servicios = document.querySelectorAll('.menu-servicio')
+let servicioActivo = null
+const descripcionServicios = document.querySelectorAll('.descripcion-servicio')
 document.addEventListener('DOMContentLoaded', () => {
-    agregarAtributoServicios();
+    agregarAtributoServicios()
     // iniciarApp();
     // eventosFormulario();
     // addEventoBoton();
@@ -84,18 +82,18 @@ function scrollNavegacion() {
 scrollNavegacion()
 
 let valueDisplays = document.querySelectorAll(".num");
-let interval = 4000;
+let interval = 4000
 valueDisplays.forEach(( valueDisplay ) => {
-    let startValue = 0;
+    let startValue = 0
     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-    let duration = Math.floor(interval / endValue);
+    let duration = Math.floor(interval / endValue)
     let counter = setInterval(function () {
-        startValue += 1;
+        startValue += 1
         valueDisplay.textContent = startValue;
         if (startValue == endValue) {
-            clearInterval(counter);
+            clearInterval(counter)
         }
-    }, duration);
+    }, duration)
 });
 
 $(document).ready(function () {
@@ -131,8 +129,8 @@ function menuHamburguesa() {
 	nav.addEventListener('click', e =>{
 		
 		//.toggle, lo que hace es añadir la clase si no esta o desaparecerla si, si lo esta
-		nav.classList.toggle('abrir'); 
-		navegacionNormal.classList.toggle('abrir');
+		nav.classList.toggle('abrir')
+		navegacionNormal.classList.toggle('abrir')
 		
 		
 	});	
@@ -145,8 +143,8 @@ function menuHamburguesa() {
 				navegacionNormal.classList.remove('abrir')
 				btnMenuMovil.classList.remove('abrir')
 			}
-		});
-	});
+		})
+	})
 }
 
 menuHamburguesa()
