@@ -27,6 +27,9 @@ body {
 img {
     width: 100%;
 }
+/* p{
+    font-size: 1.8rem;
+} */
 
 .contenedor {
     max-width: 120rem;
@@ -340,7 +343,7 @@ img {
       }
 }
 .icono {
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     text-align: center;
 }
 .icono-info {
@@ -389,7 +392,7 @@ img {
     flex: 0 0 calc(50% - 1rem) ;
 }
 .nuestra-filosofia h2 {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     font-size: 3.5rem;
     /* margin: 0; */
     text-align: center;
@@ -429,10 +432,11 @@ img {
 }
 .texto-nosotros p{
     text-align: justify;
+    font-size:1.8rem;
 }
 @media(min-width: 768px) {
     .texto-nosotros p{
-        text-align: left;
+        text-align: center;
     }
 }
 .imagenes-nosotros{
@@ -550,7 +554,7 @@ img {
     }
 }
 .menu-servicio{
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -569,13 +573,13 @@ img {
 .menu-servicio i{
     transition: all .3s ease;
     /* font-size: 3rem; */
-    font-size: 3rem;
+    font-size: 1.8rem;
     margin-right: 2rem;
 
 }
 @media (min-width:768px) {
     .menu-servicio i {
-    font-size: 4rem;
+    font-size:2.8rem;
     margin-right:0rem;
 
     }
@@ -597,7 +601,7 @@ img {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 13rem;
+        height: 10rem;
 
     }
 }
@@ -610,7 +614,7 @@ img {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 13rem;
+        height: 10.5rem;
 
     }
 }
@@ -687,10 +691,11 @@ img {
 .descripcion-texto-servicio h3 {
     color: var(--celesteOscuro);
     font-style: italic;
+    font-size: 2rem;
 }
 .descripcion-texto-servicio  p{
     color: var( --principal );
-    /* font-size: 2rem; */
+    font-size: 2rem;
   
     
 }
@@ -817,7 +822,7 @@ img {
 }
 
 .texto-trabajo p{
-    /* font-size: 2.2rem; */
+    font-size: 2rem;
     text-align: center;
 }
 @media(min-width: 768px) {
